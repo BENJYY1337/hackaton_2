@@ -19,10 +19,10 @@ $donnees = $b->hydrate($hero);
 $vieMax = $b->get_vie_max_heros();
 $force = $b->get_force_heros();
 $nomHero = $b->get_nom_heros();
-$vie = $b -> get_vie_heros();
+$vie = $b->get_vie_heros();
 $niveau = $b->get_niveau_heros();
 
-$p=$vie/$vieMax*100;
+$p = $vie / $vieMax * 100;
 
 ?>
 
@@ -40,7 +40,7 @@ $p=$vie/$vieMax*100;
 </head>
 
 <body>
-<div class="hero">
+    <div class="hero">
         <?php
         if ($hero && $hero['nom_heros'] == "Sayuka") {
         ?>
@@ -52,13 +52,13 @@ $p=$vie/$vieMax*100;
         <?php
         }
         ?>
-        <h2><?php echo $nomHero; ?></h2>
-        <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: <?php echo $p."%";?>" aria-valuenow="<?php echo $vie; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax; ?>"></div>
-        <div>Force :<?php echo $force ?></div>
-        <div>Niveau :<?php echo $niveau ?></div>
-        
-    
+    </div>
+    <h2><?php echo $nomHero; ?></h2>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: <?php echo $p . "%"; ?>" aria-valuenow="<?php echo $vie; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax; ?>"></div>
+    </div>
+    <div>Force :<?php echo $force ?></div>
+    <div>Niveau :<?php echo $niveau ?></div>
 
     <div>
         <button type="button" onclick=loadDoc()>Familier</button>
@@ -95,6 +95,3 @@ $p=$vie/$vieMax*100;
 </body>
 
 </html>
-
-
-
