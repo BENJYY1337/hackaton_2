@@ -19,22 +19,18 @@ $force1 = $b->get_force_familier();
 $niveau1 = $b -> get_niveau_familier();
 
 $pf = $vie1 / $vieMax1 * 100;
-
-
 ?>
 
 
 
 
-
 <div class="familier">
-    <h2><?php echo $nom1; ?></h2>
+            <img id="imgfamilier" src="../public/img/familier1.png" alt="image de Drakakko" width="150px">
+    <h2><?php echo $nom1 ?></h2>
     <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <?php echo $pf . "%"; ?>" aria-valuenow="<?php echo $vie1; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax1; ?>"></div>
-        <?php echo $vie1. '/'. $vieMax1; ?>
+        <?php echo $vie1. '/'. $vieMax1 ?>
     </div>
-    
-
     <div>Force :<?php echo $force1 ?></div>
     <div>Niveau :<?php echo $niveau1 ?></div>
 </div>

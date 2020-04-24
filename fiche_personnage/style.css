@@ -11,3 +11,6 @@ body{
 .familier{
     background-color: rgba(192, 85, 14, 0.438);
 }
+#imgfamilier{
+    float: left;
+}
