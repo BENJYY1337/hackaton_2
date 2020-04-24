@@ -8,7 +8,7 @@
     </head>
     <body>
         
-        <form method="POST" action="##.php">
+        <form method="POST" action="test.php">
             
             <div class="personnage">
                 <input type="text" name="personnage" placeholder="Pseudo"> 

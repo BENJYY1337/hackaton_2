@@ -2,18 +2,18 @@
 
 class Hero {
 
-    private $_idFamilier;
-    private $_nomFamilier;
-    private $_vieMaxFamilier;
-    private $_vieFamilier;
-    private $_forceFamilier;
-    private $_niveauFamilier;
-    private $_photoFamilier;
+    private $_id_heros;
+    private $_nom_heros;
+    private $_vie_max_heros;
+    private $_vie_heros;
+    private $_force_heros;
+    private $_niveau_heros;
+    private $_photo_heros;
     private $_createdAt;
 
-    
-    public function __construct(){
 
+    public function __construct(){
+        
     
     }
     
@@ -21,7 +21,7 @@ class Hero {
 public function hydrate(array $donnees)
     {
             foreach ($donnees as $key => $value) {
-                    $method = 'set'.ucfirst($key);
+                    $method = 'set_'. $key;
                     if (method_exists($this, $method)) {
                             $this->$method($value);
                     }
@@ -32,141 +32,141 @@ public function hydrate(array $donnees)
 // GETTER & SETTER
 
     /**
-     * Get the value of _idFamilier
+     * Get the value of _id_heros
      */ 
-    public function get_idFamilier()
+    public function get_id_heros()
     {
-        return $this->_idFamilier;
+        return $this->_id_heros;
     }
 
     /**
-     * Set the value of _idFamilier
+     * Set the value of _id_heros
      *
      * @return  self
      */ 
-    public function set_idFamilier($_idFamilier)
+    public function set_id_heros($_id_heros)
     {
-        $this->_idFamilier = $_idFamilier;
+        $this->_id_heros = $_id_heros;
 
         return $this;
     }
 
     /**
-     * Get the value of _nomFamilier
+     * Get the value of _nom_heros
      */ 
-    public function get_nomFamilier()
+    public function get_nom_heros()
     {
-        return $this->_nomFamilier;
+        return $this->_nom_heros;
     }
 
     /**
-     * Set the value of _nomFamilier
+     * Set the value of _nom_heros
      *
      * @return  self
      */ 
-    public function set_nomFamilier($_nomFamilier)
+    public function set_nom_heros($_nom_heros)
     {
-        $this->_nomFamilier = $_nomFamilier;
+        $this->_nom_heros = $_nom_heros;
 
         return $this;
     }
 
     /**
-     * Get the value of _vieMaxFamilier
+     * Get the value of _vie_max_heros
      */ 
-    public function get_vieMaxFamilier()
+    public function get_vie_max_heros()
     {
-        return $this->_vieMaxFamilier;
+        return $this->_vie_max_heros;
     }
 
     /**
-     * Set the value of _vieMaxFamilier
+     * Set the value of _vie_max_heros
      *
      * @return  self
      */ 
-    public function set_vieMaxFamilier($_vieMaxFamilier)
+    public function set_vie_max_heros($_vie_max_heros)
     {
-        $this->_vieMaxFamilier = $_vieMaxFamilier;
+        $this->_vie_max_heros = $_vie_max_heros;
 
         return $this;
     }
 
     /**
-     * Get the value of _vieFamilier
+     * Get the value of _vie_heros
      */ 
-    public function get_vieFamilier()
+    public function get_vie_heros()
     {
-        return $this->_vieFamilier;
+        return $this->_vie_heros;
     }
 
     /**
-     * Set the value of _vieFamilier
+     * Set the value of _vie_heros
      *
      * @return  self
      */ 
-    public function set_vieFamilier($_vieFamilier)
+    public function set_vie_heros($_vie_heros)
     {
-        $this->_vieFamilier = $_vieFamilier;
+        $this->_vie_heros = $_vie_heros;
 
         return $this;
     }
 
     /**
-     * Get the value of _forceFamilier
+     * Get the value of _force_heros
      */ 
-    public function get_forceFamilier()
+    public function get_force_heros()
     {
-        return $this->_forceFamilier;
+        return $this->_force_heros;
     }
 
     /**
-     * Set the value of _forceFamilier
+     * Set the value of _force_heros
      *
      * @return  self
      */ 
-    public function set_forceFamilier($_forceFamilier)
+    public function set_force_heros($_force_heros)
     {
-        $this->_forceFamilier = $_forceFamilier;
+        $this->_force_heros = $_force_heros;
 
         return $this;
     }
 
     /**
-     * Get the value of _niveauFamilier
+     * Get the value of _niveau_heros
      */ 
-    public function get_niveauFamilier()
+    public function get_niveau_heros()
     {
-        return $this->_niveauFamilier;
+        return $this->_niveau_heros;
     }
 
     /**
-     * Set the value of _niveauFamilier
+     * Set the value of _niveau_heros
      *
      * @return  self
      */ 
-    public function set_niveauFamilier($_niveauFamilier)
+    public function set_niveau_heros($_niveau_heros)
     {
-        $this->_niveauFamilier = $_niveauFamilier;
+        $this->_niveau_heros = $_niveau_heros;
 
         return $this;
     }
 
     /**
-     * Get the value of _photoFamilier
+     * Get the value of _photo_heros
      */ 
-    public function get_photoFamilier()
+    public function get_photo_heros()
     {
-        return $this->_photoFamilier;
+        return $this->_photo_heros;
     }
 
     /**
-     * Set the value of _photoFamilier
+     * Set the value of _photo_heros
      *
      * @return  self
      */ 
-    public function set_photoFamilier($_photoFamilier)
+    public function set_photo_heros($_photo_heros)
     {
-        $this->_photoFamilier = $_photoFamilier;
+        $this->_photo_heros = $_photo_heros;
 
         return $this;
     }

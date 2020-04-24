@@ -5,7 +5,7 @@ class heroManager  {
 
     private $pdo;
 
-    const ADDRESS='mysql:host=localhost;dbname=hero'; //Valeur du dbname à modifier en fonction du nom de la base de donnée
+    const ADDRESS='mysql:host=localhost;dbname=hackaton2'; //Valeur du dbname à modifier en fonction du nom de la base de donnée
     const USER='adrien';
     const PASS='adrien';
 
@@ -22,7 +22,7 @@ class heroManager  {
     public function readAll()
     {
         try {
-            $pdoStatement = $this->pdo->prepare('SELECT * FROM hero'); //user à modifier => nom de la table
+            $pdoStatement = $this->pdo->prepare('SELECT * FROM heros'); //user à modifier => nom de la table
             $pdoStatement->execute();
             $contact = $pdoStatement->fetchAll();
             return $contact;
@@ -31,10 +31,10 @@ class heroManager  {
         }
     }
 
-    public function read($pseudo) // parametre à renseigner => nom de la colone de recherche
+    public function read($pseudo) 
     {
         try {
-            $pdoStatement = $this->pdo->prepare('SELECT * FROM hero WHERE pseudo = ?');
+            $pdoStatement = $this->pdo->prepare('SELECT * FROM heros WHERE nom_heros = ?');
             $pdoStatement->execute([$pseudo]);
             $contact = $pdoStatement->fetch();
             return $contact;
