@@ -7,8 +7,8 @@ class heroManager
     private $pdo;
 
     const ADDRESS = 'mysql:host=localhost;dbname=hackaton2'; //Valeur du dbname à modifier en fonction du nom de la base de donnée
-    const USER = 'root';
-    const PASS = '';
+    const USER = 'adrien';
+    const PASS = 'adrien';
 
     public function __construct()
     {
