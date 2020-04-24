@@ -9,7 +9,6 @@ class heroManager  {
     const USER='adrien';
     const PASS='adrien';
 
-
     public function __construct ()
     {
         try {
