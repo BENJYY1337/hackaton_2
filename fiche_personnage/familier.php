@@ -20,8 +20,3 @@ $force1 = $b->get_force_familier();
 echo $familier1 . $vie1 . $nom1 . $force1;
 
 
-
-$familier2 = $b->hydrate($familier['1']);
-$familier3 = $b->hydrate($familier['2']);
-$familier4 = $b->hydrate($familier['3']);
-$familier5 = $b->hydrate($familier['4']);
