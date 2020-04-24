@@ -2,150 +2,160 @@
 
 class Familier
 {
-  private $_idFamilier;
-  private $_nomFamilier;
-  private $_vieMaxFamilier;
-  private $_vieFamilier;
-  private $_forceFamilier;
-  private $_niveauFamilier;
-  private $_photoFamilier;
+  private $_id_familier;
+  private $_nom_familier;
+  private $_vie_max_familier;
+  private $_vie_familier;
+  private $_force_familier;
+  private $_niveau_familier;
+  private $_photo_familier;
 
-  /**
-   * Get the value of _idFamilier
-   */
-  public function get_idFamilier()
+
+  public function hydrate(array $donnees)
   {
-    return $this->_idFamilier;
+    foreach ($donnees as $key => $value) {
+      $method = 'set_' . $key;
+      if (method_exists($this, $method)) {
+        $this->$method($value);
+      }
+    }
+  }
+  /**
+   * Get the value of _id_familier
+   */
+  public function get_id_familier()
+  {
+    return $this->_id_familier;
   }
 
   /**
-   * Set the value of _idFamilier
+   * Set the value of _id_familier
    *
    * @return  self
    */
-  public function set_idFamilier($_idFamilier)
+  public function set_id_familier($_id_familier)
   {
-    $this->_idFamilier = $_idFamilier;
+    $this->_id_familier = $_id_familier;
 
     return $this;
   }
 
   /**
-   * Get the value of _nomFamilier
+   * Get the value of _nom_familier
    */
-  public function get_nomFamilier()
+  public function get_nom_familier()
   {
-    return $this->_nomFamilier;
+    return $this->_nom_familier;
   }
 
   /**
-   * Set the value of _nomFamilier
+   * Set the value of _nom_familier
    *
    * @return  self
    */
-  public function set_nomFamilier($_nomFamilier)
+  public function set_nom_familier($_nom_familier)
   {
-    $this->_nomFamilier = $_nomFamilier;
+    $this->_nom_familier = $_nom_familier;
 
     return $this;
   }
 
   /**
-   * Get the value of _vieMaxFamilier
+   * Get the value of _vie_max_familier
    */
-  public function get_vieMaxFamilier()
+  public function get_vie_max_familier()
   {
-    return $this->_vieMaxFamilier;
+    return $this->_vie_max_familier;
   }
 
   /**
-   * Set the value of _vieMaxFamilier
+   * Set the value of _vie_max_familier
    *
    * @return  self
    */
-  public function set_vieMaxFamilier($_vieMaxFamilier)
+  public function set_vie_max_familier($_vie_max_familier)
   {
-    $this->_vieMaxFamilier = $_vieMaxFamilier;
+    $this->_vie_max_familier = $_vie_max_familier;
 
     return $this;
   }
 
   /**
-   * Get the value of _vieFamilier
+   * Get the value of _vie_familier
    */
-  public function get_vieFamilier()
+  public function get_vie_familier()
   {
-    return $this->_vieFamilier;
+    return $this->_vie_familier;
   }
 
   /**
-   * Set the value of _vieFamilier
+   * Set the value of _vie_familier
    *
    * @return  self
    */
-  public function set_vieFamilier($_vieFamilier)
+  public function set_vie_familier($_vie_familier)
   {
-    $this->_vieFamilier = $_vieFamilier;
+    $this->_vie_familier = $_vie_familier;
 
     return $this;
   }
 
   /**
-   * Get the value of _forceFamilier
+   * Get the value of _force_familier
    */
-  public function get_forceFamilier()
+  public function get_force_familier()
   {
-    return $this->_forceFamilier;
+    return $this->_force_familier;
   }
 
   /**
-   * Set the value of _forceFamilier
+   * Set the value of _force_familier
    *
    * @return  self
    */
-  public function set_forceFamilier($_forceFamilier)
+  public function set_force_familier($_force_familier)
   {
-    $this->_forceFamilier = $_forceFamilier;
+    $this->_force_familier = $_force_familier;
 
     return $this;
   }
 
   /**
-   * Get the value of _niveauFamilier
+   * Get the value of _niveau_familier
    */
-  public function get_niveauFamilier()
+  public function get_niveau_familier()
   {
-    return $this->_niveauFamilier;
+    return $this->_niveau_familier;
   }
 
   /**
-   * Set the value of _niveauFamilier
+   * Set the value of _niveau_familier
    *
    * @return  self
    */
-  public function set_niveauFamilier($_niveauFamilier)
+  public function set_niveau_familier($_niveau_familier)
   {
-    $this->_niveauFamilier = $_niveauFamilier;
+    $this->_niveau_familier = $_niveau_familier;
 
     return $this;
   }
 
   /**
-   * Get the value of _photoFamilier
+   * Get the value of _photo_familier
    */
-  public function get_photoFamilier()
+  public function get_photo_familier()
   {
-    return $this->_photoFamilier;
+    return $this->_photo_familier;
   }
 
   /**
-   * Set the value of _photoFamilier
+   * Set the value of _photo_familier
    *
    * @return  self
    */
-  public function set_photoFamilier($_photoFamilier)
+  public function set_photo_familier($_photo_familier)
   {
-    $this->_photoFamilier = $_photoFamilier;
+    $this->_photo_familier = $_photo_familier;
 
     return $this;
   }
