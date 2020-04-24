@@ -16,9 +16,11 @@ if ($nom !== $hero['nom_heros']) {
 $b = new hero;
 $donnees = $b->hydrate($hero);
 
-$vieMax = $b->get_vie_heros();
+$vieMax = $b->get_vie_max_heros();
 $force = $b->get_force_heros();
 $nomHero = $b->get_nom_heros();
+$vie = $b -> get_vie_heros();
+$niveau = $b->get_niveau_heros();
 
 
 ?>
@@ -37,33 +39,36 @@ $nomHero = $b->get_nom_heros();
 </head>
 
 <body>
-    
-        
+
+
     <img id="imgperso" src="../public/img/guerrier.png" alt="image du guerrier" width="300px">
     <!-- <img id="imgperso" src="../public/img/guerriere.png" alt="image de la guerriere" width="300px"> -->
     <h2><?php echo $nomHero; ?></h2>
-    <div>Barre de vie</div>
-    <div>Force :</div>
-    <div>Niveau :</div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: <?php $p=$vie/$vieMax*100;echo $p."%";?>" aria-valuenow="<?php echo $vie; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax; ?>"></div>
+    </div>
+    <div>Force :<?php echo $force; ?></div>
+    <div>Niveau :<?php echo $niveau; ?></div>
 
     <div>
         <button type="button" onclick=loadDoc()>Familier</button>
-    
-    <script>
-        function loadDoc() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status ==200){
-                    document.getElementById("familier").innerHTML =this.responseText;
-                }
-            };
-            xhttp.open("GET", "familier.php",true);
-            xhttp.send();
-        }
-    </script></div>
+
+        <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("familier").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "familier.php", true);
+                xhttp.send();
+            }
+        </script>
+    </div>
 
     <div>BOUTON EFFACER</div>
-    
+
     <div>BOUTON SE DECONNECTER</div>
 
     <div id="familier">
@@ -80,3 +85,6 @@ $nomHero = $b->get_nom_heros();
 </body>
 
 </html>
+
+
+
