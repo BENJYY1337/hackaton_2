@@ -1,5 +1,6 @@
 <?php   
 //'user' à modifier en remplaçant par le nom de la table (ctrl+d pour modifier plusieurs, Alt pour déselectionner)
+
 class heroManager  {
 
     private $pdo;
