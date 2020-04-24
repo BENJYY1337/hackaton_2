@@ -1,8 +1,25 @@
 <?php
 
-require 'style.css';
-include 'guerrier.png';
-include 'guerrierre.png';
+require ('../models/HeroManager.php');
+require ('../models/Hero.php');
+
+$nom = htmlspecialchars($_POST['personnage']);
+
+    $a = new heroManager;
+    $hero = $a->read($nom);
+
+if ($nom !== $hero['nom_heros']) {
+    header('location:index.php?erreur:le%20personnage%20n\'existe%20pas');
+}
+
+
+$b = new hero;
+$donnees = $b-> hydrate($hero);
+
+$vieMax= $b->get_vie_heros();
+$force = $b->get_force_heros();
+$nomHero = $b->get_nom_heros();
+
 
 ?>
 
@@ -19,14 +36,14 @@ include 'guerrierre.png';
 </head>
 
 <body>
-    <h2>ALAHAZAR</h2>
+    <h2><?php echo $nomHero;?></h2>
 
 <div class="hero">
 
 </div>
 
-<img src="guerrier.png" alt="">
-<img src="guerriere.png" alt="">
+<img src="public/img/guerrier.png" alt="image du guerrier">
+<img src="public/img/guerriere.png" alt="image de la guerriere">
 
 
 <!-- Optional JS - Jquery - Bootstrap -->
