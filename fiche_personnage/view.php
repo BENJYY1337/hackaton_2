@@ -37,14 +37,40 @@ $nomHero = $b->get_nom_heros();
 </head>
 
 <body>
+    
+        
+    <img id="imgperso" src="../public/img/guerrier.png" alt="image du guerrier" width="300px">
+    <!-- <img id="imgperso" src="../public/img/guerriere.png" alt="image de la guerriere" width="300px"> -->
     <h2><?php echo $nomHero; ?></h2>
+    <div>Barre de vie</div>
+    <div>Force :</div>
+    <div>Niveau :</div>
 
-    <div class="hero">
+    <div>
+        <button type="button" onclick=loadDoc()>Familier</button>
+    
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status ==200){
+                    document.getElementById("familier").innerHTML =this.responseText;
+                }
+            };
+            xhttp.open("GET", "familier.php",true);
+            xhttp.send();
+        }
+    </script></div>
 
+    <div>BOUTON EFFACER</div>
+    
+    <div>BOUTON SE DECONNECTER</div>
+
+    <div id="familier">
+        <!-- ICI S'AFFICHERA LA REQUETE AJAX -->
     </div>
 
-    <img src="../public/img/guerrier.png" alt="image du guerrier">
-    <img src="../public/img/guerriere.png" alt="image de la guerriere">
+    <div>AFFICHAGE DES INFOS DU COOKIE</div>
 
 
     <!-- Optional JS - Jquery - Bootstrap -->
