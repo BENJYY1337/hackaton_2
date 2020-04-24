@@ -42,8 +42,8 @@ $nomHero = $b->get_nom_heros();
 
 </div>
 
-<img src="public/img/guerrier.png" alt="image du guerrier">
-<img src="public/img/guerriere.png" alt="image de la guerriere">
+<img src="../public/img/guerrier.png" alt="image du guerrier">
+<img src="../public/img/guerriere.png" alt="image de la guerriere">
 
 
 <!-- Optional JS - Jquery - Bootstrap -->
