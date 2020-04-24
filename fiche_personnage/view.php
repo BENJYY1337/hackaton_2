@@ -22,6 +22,7 @@ $nomHero = $b->get_nom_heros();
 $vie = $b -> get_vie_heros();
 $niveau = $b->get_niveau_heros();
 
+$p=$vie/$vieMax*100;
 
 ?>
 
@@ -39,16 +40,25 @@ $niveau = $b->get_niveau_heros();
 </head>
 
 <body>
-
-
-    <img id="imgperso" src="../public/img/guerrier.png" alt="image du guerrier" width="300px">
-    <!-- <img id="imgperso" src="../public/img/guerriere.png" alt="image de la guerriere" width="300px"> -->
-    <h2><?php echo $nomHero; ?></h2>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: <?php $p=$vie/$vieMax*100;echo $p."%";?>" aria-valuenow="<?php echo $vie; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax; ?>"></div>
-    </div>
-    <div>Force :<?php echo $force; ?></div>
-    <div>Niveau :<?php echo $niveau; ?></div>
+<div class="hero">
+        <?php
+        if ($hero && $hero['nom_heros'] == "Sayuka") {
+        ?>
+            <img id="imgperso" src="../public/img/guerriere.png" alt="image de la guerriere" width="300px">
+        <?php
+        } else if ($hero && $hero['nom_heros'] == "Alahazar") {
+        ?>
+            <img id="imgperso" src="../public/img/guerrier.png" alt="image du guerrier" width="300px">
+        <?php
+        }
+        ?>
+        <h2><?php echo $nomHero; ?></h2>
+        <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: <?php echo $p."%";?>" aria-valuenow="<?php echo $vie; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax; ?>"></div>
+        <div>Force :<?php echo $force ?></div>
+        <div>Niveau :<?php echo $niveau ?></div>
+        
+    
 
     <div>
         <button type="button" onclick=loadDoc()>Familier</button>
