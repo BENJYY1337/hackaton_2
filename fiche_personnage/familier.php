@@ -25,6 +25,7 @@ $pf = $vie1 / $vieMax1 * 100;
 
 
 <div class="familier">
+    <audio src="../public/mp3/1796.wav" autoplay="TRUE"></audio>
             <img id="imgfamilier" src="../public/img/familier1.png" alt="image de Drakakko" width="150px">
     <h2><?php echo $nom1 ?></h2>
     <div class="progress">
