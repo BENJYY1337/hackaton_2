@@ -21,7 +21,7 @@
         if (isset($_GET['erreur'])) {
         ?>
             <div class="alert alert-danger" role="alert">
-                Pas de personnage <?= $_GET['message']; ?>
+                <?= $_GET['erreur']; ?>
             </div>
         <?php
         }
