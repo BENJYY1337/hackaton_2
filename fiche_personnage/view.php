@@ -9,7 +9,7 @@ $nom = htmlspecialchars($_POST['personnage']);
     $hero = $a->read($nom);
 
 if ($nom !== $hero['nom_heros']) {
-    header('location:../index.php?erreur:le%20personnage%20n\'existe%20pas');
+    header('location:../index.php?erreur=le%20personnage%20n\'existe%20pas');
 }
 
 
@@ -42,8 +42,8 @@ $nomHero = $b->get_nom_heros();
 
 </div>
 
-<img src="public/img/guerrier.png" alt="image du guerrier">
-<img src="public/img/guerriere.png" alt="image de la guerriere">
+<img src="../public/img/guerrier.png" alt="image du guerrier">
+<img src="../public/img/guerriere.png" alt="image de la guerriere">
 
 
 <!-- Optional JS - Jquery - Bootstrap -->
