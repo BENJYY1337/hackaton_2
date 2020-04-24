@@ -55,7 +55,7 @@ $p = $vie / $vieMax * 100;
     </div>
     <h2><?php echo $nomHero; ?></h2>
     <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: <?php echo $p . "%"; ?>" aria-valuenow="<?php echo $vie; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax; ?>"></div>
+        <div class="progress-bar" role="progressbar" style="width: <?php echo $p . "%"; ?>" aria-valuenow="<?php echo $vie; ?>" aria-valuemin="0" aria-valuemax="<?php echo $vieMax; ?>"><?php echo $vie. '/'. $vieMax; ?></div>
     </div>
     <div>Force :<?php echo $force ?></div>
     <div>Niveau :<?php echo $niveau ?></div>
