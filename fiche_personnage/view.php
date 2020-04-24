@@ -9,7 +9,7 @@ $nom = htmlspecialchars($_POST['personnage']);
     $hero = $a->read($nom);
 
 if ($nom !== $hero['nom_heros']) {
-    header('location:index.php?erreur:le%20personnage%20n\'existe%20pas');
+    header('location:../index.php?erreur:le%20personnage%20n\'existe%20pas');
 }
 
 
